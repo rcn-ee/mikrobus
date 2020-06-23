@@ -9,9 +9,9 @@ if [ -f .builddir ] ; then
 	fi
 
 	git clone -b ${branch} https://github.com/vaishnav98/mikrobus ./src --depth=1
-	cd ./src/
-	patch -p1 < ../../0001-bits-to-bitops.patch
-	cd -
+	#cd ./src/
+	#patch -p1 < ../../0001-bits-to-bitops.patch
+	#cd -
 
 	if [ "x${ARCH}" = "xarmv7l" ] ; then
 		make_options="CROSS_COMPILE= KDIR=/build/buildd/linux-src release"
