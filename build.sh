@@ -14,7 +14,7 @@ if [ -f .builddir ] ; then
 	#cd -
 
 	if [ "x${ARCH}" = "xarmv7l" ] ; then
-		make_options="CROSS_COMPILE= KDIR=/build/buildd/linux-src release"
+		make_options="CROSS_COMPILE= KDIR=/build/buildd/linux-src all"
 	else
 		x86_dir="`pwd`/../../normal"
 		if [ -f `pwd`/../../normal/.CC ] ; then
